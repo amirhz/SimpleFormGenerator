@@ -75,8 +75,8 @@ namespace SimpleFormGenerator.UI.Controllers
             foreach (var value in values)
             {
                 _valueService.AddValue(new Value { Val = value.TitleEn, FormId = value.FormId, FieldId = value.Id });
-                _uow.SaveAllChanges();
             }
+            _uow.SaveAllChanges();
             return View(values);
         }
     }
